@@ -1,4 +1,5 @@
 # Phishing Investigation Projects
+![Project Banner](assets/project-banner.png)
 
 A collection of practical phishing investigation projects focused on email analysis, threat hunting, evidence handling, incident response, and detection engineering. The repository is organized to demonstrate a repeatable SOC workflow—from initial triage through investigation, documentation, and response recommendations.
 
