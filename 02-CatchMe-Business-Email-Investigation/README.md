@@ -1,4 +1,5 @@
 # CatchMe — Business Email Investigation
+![Project Banner](assets/project-banner.png)
 
 A hands-on cybersecurity portfolio project investigating a suspicious payment-themed email using email-header review, MIME inspection, safe attachment analysis, evidence integrity checks, and incident-response documentation.
 
