@@ -1,0 +1,17 @@
+# Evidence Integrity Manifest
+
+Generated: 2026-10-15T09:15:59+05:30
+
+## Original email artifacts
+2ed3d561ebc566b8bb131efb5db6fb227c6b6d9042b6ee835bbf8f61e6ec8a15  assets/evidence/email/email1.eml
+d905c328fa169f892e89f66dc34595e3d00db9c530e349400cb692d2b86c82b6  assets/evidence/email/email2.txt
+69f6d1ef0c1026e71c0268bda6e4a865176af9b5c105781868420555435e86a9  assets/evidence/email/email3.eml
+
+## Extracted PDF
+7a8fbf5de792a20a2f3be994e041f34f9ca3f37e10d829f77bef94dfe7b77900  analysis/pdf/zmqpalgh.pdf
+
+## File identification
+assets/evidence/email/email1.eml: RFC 822 mail, ASCII text
+assets/evidence/email/email2.txt: ASCII text
+assets/evidence/email/email3.eml: RFC 822 mail, ASCII text
+analysis/pdf/zmqpalgh.pdf:        PDF document, version 1.6 (zip deflate encoded)
