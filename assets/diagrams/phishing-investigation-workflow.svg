@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
+<rect width="1100" height="700" fill="#0b1220"/>
+<text x="550" y="48" fill="#e5f3ff" font-size="27" font-family="Arial" text-anchor="middle" font-weight="bold">CatchMe | Phishing Investigation Workflow</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#55c8f0"/></marker></defs>
+<g font-family="Arial" text-anchor="middle" font-size="18">
+<rect x="330" y="85" width="440" height="66" rx="12" fill="#14283d" stroke="#55c8f0" stroke-width="2"/>
+<text x="550" y="125" fill="#ffffff">1. Collect email artifacts</text>
+<path d="M550 151 V180" stroke="#55c8f0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="330" y="185" width="440" height="66" rx="12" fill="#14283d" stroke="#55c8f0" stroke-width="2"/>
+<text x="550" y="225" fill="#ffffff">2. Preserve evidence and hash files</text>
+<path d="M550 251 V280" stroke="#55c8f0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="330" y="285" width="440" height="66" rx="12" fill="#14283d" stroke="#55c8f0" stroke-width="2"/>
+<text x="550" y="325" fill="#ffffff">3. Analyze headers, URLs and attachment</text>
+<path d="M550 351 V380" stroke="#55c8f0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="330" y="385" width="440" height="66" rx="12" fill="#14283d" stroke="#55c8f0" stroke-width="2"/>
+<text x="550" y="425" fill="#ffffff">4. Record indicators and timeline</text>
+<path d="M550 451 V480" stroke="#55c8f0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="330" y="485" width="440" height="66" rx="12" fill="#14283d" stroke="#55c8f0" stroke-width="2"/>
+<text x="550" y="525" fill="#ffffff">5. Assess evidence and uncertainty</text>
+<path d="M550 551 V580" stroke="#55c8f0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="330" y="585" width="440" height="66" rx="12" fill="#183a34" stroke="#68d7a6" stroke-width="2"/>
+<text x="550" y="625" fill="#ffffff">6. Report findings and next actions</text>
+</g>
+<text x="40" y="675" fill="#a9bed0" font-size="13" font-family="Arial">Evidence-based workflow; no malicious verdict is assumed.</text>
+</svg>
