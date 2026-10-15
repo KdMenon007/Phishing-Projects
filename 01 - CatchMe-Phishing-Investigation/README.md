@@ -1,5 +1,7 @@
 # CatchMe — Phishing Email Investigation
 
+![Project Banner](assets/project-banner.png)
+
 ## Project Overview
 
 A hands-on phishing investigation lab focused on email header analysis,
