@@ -1,5 +1,7 @@
 # CatchMe — Malicious URL & Phishing Infrastructure Investigation
 
+![Project Banner](assets/project-banner.png)
+
 A practical SOC L2 threat-intelligence investigation covering URL triage, domain registration metadata, DNS analysis, resolver comparison, detection design, and evidence preservation.
 
 > **Investigation status:** Initial investigation completed; independent reputation validation and enterprise telemetry correlation remain pending.
