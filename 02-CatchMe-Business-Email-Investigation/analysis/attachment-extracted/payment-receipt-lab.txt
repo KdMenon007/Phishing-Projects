@@ -1,0 +1,6 @@
+SYNTHETIC LAB ARTIFACT - NOT THE ORIGINAL ATTACHMENT
+Created for CatchMe Business Email Investigation training.
+This file is harmless text packaged in a CAB container.
+It is not a real bank receipt and contains no executable content.
+Scenario reference: 09674321
+Claimed amount in email: USD 149,650 (unverified email claim)

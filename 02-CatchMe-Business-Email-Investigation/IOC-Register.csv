@@ -1,0 +1,10 @@
+IOC_ID,Indicator_Type,Indicator_Value,Source,Evidence_ID,Classification,Confidence,Disposition,Notes
+IOC-001,Email Address,info@hackerkiran.com,From header,E-01,Observed in modified sample,High for sample content,Review,Training address; sender identity and ownership are not verified
+IOC-002,Email Address,info.hackerkiran@mail.com,Reply-To header,E-01,Observed in modified sample,High for sample content,Review,Differs from From address; discrepancy alone does not prove fraud
+IOC-003,IPv4 Address,192.119.71.157,Email header material,E-01,Observed in supplied sample,High for sample content,Unverified,Ownership reputation and malicious association have not been independently checked
+IOC-004,Email Domain,hackerkiran.com,From and related edited headers,E-01,Observed in modified sample,High for sample content,Unverified,Domain references were edited in the training sample; no live DNS or authentication validation is claimed
+IOC-005,Email Reference,09674321,Email subject and body,E-01,Claimed transaction reference,High for sample content,Context only,Reference is an email claim and does not prove a real transfer
+IOC-006,File SHA-256,8d9e777637f66fd45fedc7388ffd97c6a0a771f1c0c59e0a15514a8bc510232d,Local SHA-256 calculation,E-01,Artifact integrity hash,High for calculated file hash,Integrity tracking,Identifies the current modified email sample; not a maliciousness verdict
+IOC-007,File SHA-256,dd04f62f7fb1a50850e1f76548a62d66d745ebf7bc207ac5930b031ee2b63d71,Local SHA-256 calculation,E-02,Synthetic artifact hash,High for calculated file hash,Integrity tracking,Hash belongs to the synthetic CAB and must not be attributed to the original attachment
+IOC-008,File SHA-256,21adb3bd7d3ca72fb4ae1371c69521e560a1ebb7969b39690aae6460dac4c66f,Local SHA-256 calculation,E-03,Synthetic artifact hash,High for calculated file hash,Integrity tracking,Hash belongs to the harmless extracted training text
+IOC-009,Email Authentication Text,SPF failure text for hackerkiran.com,Authentication-related header text,E-01,Present in modified sample,High for sample content,Unverified,Not a live SPF lookup; do not treat as independently validated authentication evidence
