@@ -1,4 +1,0 @@
-timestamp,source,event,details,confidence
-"Mon, 21 Jun 2021 15:35:39 -0000",email1.eml,Email received/sent timestamp from message header,Help protect your budget by protecting your home,Header value; original timezone/context not independently verified
-"Sun, 11 Jul 2021 11:43:46 +0000",email3.eml,Email received/sent timestamp from message header,Order Placed : Your Order ID [redacted-order-id] Placed Successfully,Header value; original timezone/context not independently verified
-2021:07:01 08:31:50-04:00,analysis/pdf/zmqpalgh.pdf,PDF metadata creation date,Metadata timestamp; not necessarily the email delivery time,Embedded metadata; may be altered
