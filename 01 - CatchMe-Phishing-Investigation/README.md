@@ -58,7 +58,7 @@ Files and folders are included only when relevant to a particular investigation.
 
 Start with these operational guides:
 
-- [Phishing Investigation Playbook](Playbook.md) — overall investigation methodology, roles, decision points, and response principles.
+- [Phishing Investigation Playbook](https://github.com/KdMenon007/Phishing-Projects/blob/main/01%20-%20CatchMe-Phishing-Investigation/Playbook.md) — overall investigation methodology, roles, decision points, and response principles.
 - [Phishing Investigation Runbook](Runbook.md) — step-by-step analyst workflow, evidence hashing, escalation criteria, containment decisions, and closure checks.
 
 > If your repository uses different filenames or stores these documents in a subfolder, update the links to match the exact GitHub paths.
