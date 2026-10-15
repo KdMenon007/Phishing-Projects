@@ -1,135 +1,311 @@
-# Phishing Investigation Projects
+# CatchMe SOC — Phishing Investigation & Incident Response
 
-A collection of practical phishing investigation projects focused on email analysis, threat hunting, evidence handling, incident response, and detection engineering. The repository is organized to demonstrate a repeatable SOC workflow—from initial triage through investigation, documentation, and response recommendations.
+## 1. Project Overview
 
-> **Purpose:** Cybersecurity learning and portfolio development. Use only authorized environments, approved tools, and lawfully obtained samples. Findings in individual projects are limited to the evidence documented in that project.
+**CatchMe SOC — Phishing Investigation & Incident Response** is a cybersecurity investigation portfolio focused on analyzing phishing emails, identifying malicious indicators, investigating email-based attacks, and documenting incident response activities using a structured Security Operations Center (SOC) workflow.
 
-## Objectives
+This repository serves as a central collection of phishing investigation case files, forensic analysis, threat intelligence research, detection logic, and incident response documentation.
 
-- Investigate suspicious emails and potential brand impersonation.
-- Analyze email headers, sender domains, and SPF/DKIM/DMARC results.
-- Extract and assess URLs, domains, IP addresses, file hashes, and attachments.
-- Preserve evidence and document integrity using cryptographic hashes.
-- Correlate available email, endpoint, network, and identity telemetry.
-- Develop and validate hunting queries and detection ideas.
-- Apply incident-response practices, severity assessment, and escalation.
-- Document findings, limitations, indicators, and lessons learned clearly.
+The objective is to demonstrate practical, evidence-driven investigation skills relevant to SOC Analyst L1/L2, Senior SOC Analyst, Threat Hunter, and Incident Responder roles.
 
-## Repository Structure
+Each investigation follows a repeatable workflow covering initial alert triage, email artifact collection, technical analysis, IOC extraction, threat attribution where evidence supports it, impact assessment, detection opportunities, and incident response recommendations.
 
-The exact contents may vary by project. A typical layout is:
+## 2. Objectives
+
+- Investigate suspicious and potentially malicious emails using a structured SOC workflow.
+- Analyze email headers, sender identity, authentication results, and message routing.
+- Identify phishing URLs, suspicious domains, malicious attachments, and embedded indicators.
+- Investigate business email compromise (BEC), impersonation, credential phishing, and suspicious business requests.
+- Extract and document indicators of compromise (IOCs).
+- Use threat intelligence and OSINT to enrich investigation findings.
+- Map observed attacker behavior to the MITRE ATT&CK framework.
+- Develop detection opportunities for email security gateways, SIEM platforms, and endpoint telemetry.
+- Document incident timelines, evidence, findings, and recommended containment actions.
+- Produce professional incident reports suitable for technical review and a cybersecurity portfolio.
+
+## 3. Investigation Scope
+
+The repository may contain multiple investigation scenarios, each documented as an independent case.
+
+| Investigation Area | Scope |
+|---|---|
+| Email header analysis | Received chain, sender identity, Reply-To, Return-Path, SPF, DKIM, and DMARC |
+| Phishing investigation | Suspicious messages, social engineering, and credential theft attempts |
+| URL analysis | Redirects, suspicious domains, URL reputation, and destination analysis |
+| Attachment analysis | File metadata, hashes, static analysis, and safe sandbox results where available |
+| Business Email Compromise | Executive impersonation, payment requests, invoice fraud, and trusted-sender abuse |
+| Threat intelligence | Domain, IP, URL, file-hash enrichment, and OSINT |
+| IOC extraction | Domains, URLs, IP addresses, email addresses, and file hashes |
+| Detection engineering | Email rules, SIEM queries, correlation opportunities, and alert tuning |
+| Incident response | Triage, containment, eradication, recovery, and lessons learned |
+
+*The actual scope of each case depends on the available evidence. Unavailable telemetry or unperformed analysis must be documented rather than assumed.*
+
+## 4. SOC Investigation Methodology
+
+Each case follows a consistent investigation lifecycle.
+
+### Phase 1 — Alert Triage
+
+- Review the reported email or security alert.
+- Identify the recipient, sender, subject, timestamp, and reported behavior.
+- Determine the initial severity and investigation priority.
+- Preserve the original message and associated artifacts when authorized.
+- Establish the investigation scope and evidence sources.
+
+### Phase 2 — Email Forensics
+
+- Examine email headers and message structure.
+- Review SPF, DKIM, and DMARC results.
+- Compare the displayed sender address with the actual sending infrastructure and domain.
+- Inspect Reply-To and Return-Path discrepancies.
+- Review message routing, timestamps, and authentication anomalies.
+- Identify suspicious language, urgency, impersonation, and unusual requests.
+
+### Phase 3 — URL and Attachment Analysis
+
+- Extract URLs, domains, filenames, and file hashes.
+- Inspect URL structure, redirects, and domain characteristics.
+- Enrich indicators using appropriate threat intelligence sources.
+- Calculate cryptographic hashes for available files.
+- Perform static analysis and use controlled sandbox environments when justified.
+- Record analysis results and limitations.
+
+Do not open suspicious links or execute attachments on a normal workstation.
+
+### Phase 4 — Threat Intelligence and IOC Enrichment
+
+- Search relevant threat intelligence sources for extracted indicators.
+- Review domain registration and DNS information where appropriate.
+- Check IP addresses, URLs, and file hashes against reputable intelligence services.
+- Correlate findings with known malicious infrastructure or campaigns when evidence supports the relationship.
+- Record source, lookup time, result, and confidence for each enrichment finding.
+
+A reputation result alone does not prove that an artifact is malicious or benign.
+
+### Phase 5 — Investigation and Correlation
+
+Where telemetry is available:
+
+- Search email gateway and mail server logs.
+- Identify other recipients of the same or similar messages.
+- Check for URL clicks and attachment delivery events.
+- Review endpoint and authentication activity associated with affected users.
+- Investigate possible credential submission, suspicious sign-ins, mailbox rule changes, or account compromise.
+- Establish the incident timeline and assess the potential impact.
+
+### Phase 6 — Detection and MITRE ATT&CK Mapping
+
+- Identify observed attacker techniques and relevant detection opportunities.
+- Map supported findings to applicable MITRE ATT&CK techniques.
+- Develop detection logic using the available SIEM or email security platform.
+- Document required log sources, query logic, expected results, and false-positive considerations.
+- Validate detections against available test data or controlled simulations.
+
+Technique mapping must be based on observed behavior or clearly stated investigative hypotheses.
+
+### Phase 7 — Incident Response
+
+- Recommend or perform authorized containment actions.
+- Block confirmed malicious indicators where appropriate.
+- Remove malicious emails from affected mailboxes when supported by organizational procedures.
+- Reset credentials and revoke sessions if compromise is confirmed or reasonably suspected.
+- Review and remediate persistence or unauthorized mailbox changes.
+- Validate recovery and document residual risks.
+
+### Phase 8 — Reporting and Lessons Learned
+
+- Prepare a technical incident report.
+- Maintain an evidence register and IOC register.
+- Document the timeline, findings, impact, and confidence level.
+- Record containment and remediation recommendations.
+- Identify detection gaps and opportunities for prevention.
+- Capture lessons learned and follow-up actions.
+
+## 5. Repository Structure
 
 ```text
-Phishing-Projects/
+CatchMe-Phishing-Investigations/
+│
 ├── README.md
-├── Playbook.md
-├── Runbook.md
-├── Incident-Response-Report.md
-├── Investigation-Timeline.md
-├── Evidence-Register.md
-├── IOC-Register.csv
-├── MITRE-ATTACK-Mapping.md
-├── lessons-learned.md
-├── analysis/
-│   ├── evidence-timeline.csv
-│   └── indicator-inventory.csv
-├── detections/
-│   └── elastic-kql/
-├── public-evidence/
-├── references/
-├── scripts/
-└── assets/
-    └── diagrams/
+│
+├── Cases/
+│   ├── Case-001-Phishing-Email/
+│   │   ├── Incident-Report.md
+│   │   ├── Email-Analysis.md
+│   │   ├── Evidence-Register.md
+│   │   ├── IOC-Register.md
+│   │   ├── Investigation-Timeline.md
+│   │   ├── MITRE-ATTACK-Mapping.md
+│   │   ├── Detection-Logic.md
+│   │   └── assets/
+│   │
+│   ├── Case-002-Business-Email-Compromise/
+│   │   ├── Incident-Report.md
+│   │   ├── Email-Analysis.md
+│   │   ├── Evidence-Register.md
+│   │   ├── IOC-Register.md
+│   │   ├── Investigation-Timeline.md
+│   │   ├── MITRE-ATTACK-Mapping.md
+│   │   ├── Detection-Logic.md
+│   │   └── assets/
+│   │
+│   └── Case-003-Suspicious-Attachment/
+│       ├── Incident-Report.md
+│       ├── Email-Analysis.md
+│       ├── Evidence-Register.md
+│       ├── IOC-Register.md
+│       ├── Investigation-Timeline.md
+│       ├── MITRE-ATTACK-Mapping.md
+│       ├── Detection-Logic.md
+│       └── assets/
+│
+├── Detections/
+│   ├── SIEM-Queries/
+│   ├── Email-Security-Rules/
+│   └── Detection-Validation.md
+│
+├── Playbooks/
+│   ├── Phishing-Triage.md
+│   ├── Email-Compromise-Response.md
+│   └── Malicious-Attachment-Response.md
+│
+├── References/
+│   ├── Tools-and-Resources.md
+│   └── MITRE-ATTACK-References.md
+│
+└── LICENSE
 ```
 
-Files and folders are included only when relevant to a particular investigation.
+*This is a proposed structure. Create case folders and supporting files as the investigations are developed.*
 
-## Standard Investigation Workflow
+## 6. Evidence Collection and Handling
 
-1. **Intake and preservation** — Record the report, preserve the original message, calculate SHA-256, and create a case record.
-2. **Email analysis** — Review message headers, sender and reply domains, authentication results, message content, and contextual anomalies.
-3. **URL and attachment triage** — Extract indicators and inspect files using approved static-analysis methods. Use isolated analysis for any required dynamic testing.
-4. **Threat hunting and scoping** — Search authorized telemetry for matching messages, indicators, recipients, and potential follow-on activity.
-5. **Assessment** — Evaluate evidence strength, scope, user interaction, potential impact, and severity.
-6. **Response** — Recommend or perform authorized containment and recovery actions, then verify the outcome.
-7. **Documentation** — Maintain the evidence register, IOC register, timeline, investigation report, and lessons learned.
+Evidence must be handled consistently to support reproducible investigations.
 
-## Documentation
+For each artifact, record:
 
-Start with these operational guides:
+- Evidence ID
+- Artifact name and type
+- Collection source
+- Collection timestamp and timezone
+- SHA-256 hash, where applicable
+- Storage location
+- Analysis performed
+- Observations and findings
+- Evidence limitations
 
-- [Phishing Investigation Playbook](Playbook.md) — overall investigation methodology, roles, decision points, and response principles.
-- [Phishing Investigation Runbook](Runbook.md) — step-by-step analyst workflow, evidence hashing, escalation criteria, containment decisions, and closure checks.
+Preserve original artifacts where possible and conduct analysis on working copies. Redact credentials, personal information, confidential business data, and sensitive email content before publishing evidence.
 
-> If your repository uses different filenames or stores these documents in a subfolder, update the links to match the exact GitHub paths.
+Do not upload live credentials, session tokens, private customer information, or confidential corporate emails to a public repository.
 
-Where available, each project may include:
+## 7. Tools and Technologies
 
-| Document | Purpose |
+Tools may vary by case. The following are examples of tools suitable for the investigation workflow.
+
+| Category | Example Tools |
 |---|---|
-| Playbook | Investigation methodology, roles, decision points, and response principles |
-| Runbook | Operational steps, commands, checks, and escalation criteria |
-| Incident response report | Findings, impact assessment, actions, and disposition |
-| Investigation timeline | Ordered events and analyst activities |
-| Evidence register | Evidence sources, collection details, and integrity information |
-| IOC register | Indicators with context, source, status, and confidence |
-| MITRE ATT&CK mapping | Evidence-supported technique mapping |
-| Detection content | Hunting queries or detection logic with field and validation notes |
-| Lessons learned | Gaps, improvements, and follow-up actions |
+| Email analysis | Microsoft Outlook message inspection, Google Admin email logs, Microsoft Defender for Office 365 |
+| Header analysis | Google Admin Toolbox Messageheader, MXToolbox |
+| URL analysis | urlscan.io, VirusTotal, URLhaus |
+| File analysis | Detect It Easy, ExifTool, YARA, controlled malware-analysis sandboxes |
+| Threat intelligence | VirusTotal, AbuseIPDB, URLhaus, WHOIS and DNS utilities |
+| Network analysis | Wireshark, Zeek |
+| SIEM and detection | Elastic Security, Splunk, Microsoft Sentinel |
+| Incident response | Evidence registers, investigation timelines, endpoint and identity audit logs |
+| Frameworks | MITRE ATT&CK |
 
-## Evidence Handling and Safety
+*These are candidate tools, not a claim that every tool was used in every investigation. Public scanning services may retain or share submitted samples, URLs, or other data; review their policies before submitting sensitive artifacts.*
 
-- Preserve original evidence separately from working copies.
-- Record SHA-256 hashes, collection details, and any transformations.
-- Label sanitized or redacted files as **public derivatives**, not original evidence.
-- Do not publish personal data, credentials, tokens, internal addresses, confidential headers, or unredacted sensitive samples.
-- Do not open suspicious links or execute attachments on a normal workstation.
-- Use approved, isolated environments for dynamic analysis.
-- Do not upload sensitive samples to public scanning services without authorization.
-- Treat threat-intelligence and reputation results as contextual evidence, not definitive proof.
+## 8. MITRE ATT&CK Coverage
 
-## Analysis Principles
+Depending on the evidence, investigations may involve techniques such as:
 
-- Separate **observed facts**, **analyst assessment**, and **unverified hypotheses**.
-- SPF, DKIM, or DMARC passing does not prove that a sender is authorized to represent a brand or that a message is benign.
-- A suspicious display name or domain mismatch is an indicator to investigate, not proof on its own.
-- Static analysis can identify suspicious features, but the absence of those features does not guarantee a file is safe.
-- A missing log source or unavailable telemetry means the activity could not be assessed; it does not prove that no activity occurred.
-- Map MITRE ATT&CK techniques only when supported by evidence. Label uncertain mappings as candidates.
-- Validate queries against the actual data source, field mappings, and known events before treating them as detections.
+| Technique | ID | Relevance |
+|---|---|---|
+| Phishing: Spearphishing Attachment | T1566.001 | Malicious email attachment |
+| Phishing: Spearphishing Link | T1566.002 | Malicious link delivered through email |
+| Phishing: Spearphishing via Service | T1566.003 | Phishing delivered through a third-party service |
+| Phishing: Spearphishing Voice | T1566.004 | Voice-based phishing where relevant |
+| User Execution: Malicious File | T1204.002 | User executes a malicious file |
+| Steal Web Session Cookie | T1539 | Session-cookie theft, if supported by evidence |
+| Email Collection | T1114 | Email collection activity, where observed |
 
-## Tools and Technologies
+Only techniques supported by the case evidence should be included in the final mapping. A phishing email alone does not establish that a user executed a file, disclosed credentials, or suffered account compromise.
 
-Projects may use relevant tools for:
-- Email and MIME/header analysis
-- File identification, hashing, and static analysis
-- URL parsing and passive domain/IP research
-- SIEM searches and threat-hunting queries
-- Endpoint, network, and identity log correlation
-- Evidence tracking and incident reporting
+Reference: [MITRE ATT&CK — Phishing (T1566)](https://attack.mitre.org/techniques/T1566/)
 
-The tools used and the validation performed should be documented in each project. Listing a tool or query does not imply that it was run successfully or that its results were independently validated.
+## 9. Incident Report Requirements
 
-## Project Status and Limitations
+Every completed case should contain an incident report covering:
 
-Each investigation should state:
-- Which evidence was actually available and examined.
-- Which queries, tools, and checks were executed.
-- Whether results were independently verified.
-- What telemetry or context was unavailable.
-- Which conclusions are confirmed, likely, possible, or undetermined.
-- Which response actions were completed, recommended, or not performed.
+1. Executive summary
+2. Incident classification and severity
+3. Investigation scope
+4. Affected users, systems, and services
+5. Evidence sources
+6. Technical email analysis
+7. URL and attachment findings
+8. Threat intelligence enrichment
+9. IOC register
+10. Investigation timeline
+11. Impact assessment
+12. MITRE ATT&CK mapping
+13. Detection and correlation opportunities
+14. Containment and remediation
+15. Recovery and validation
+16. Lessons learned
+17. References and appendices
 
-Do not infer compromise, credential theft, malware execution, or successful containment unless the evidence supports that conclusion.
+Clearly distinguish confirmed facts, analytical conclusions, and unverified hypotheses.
 
-## Intended Audience
+## 10. Security and Ethical Considerations
 
-This repository is intended for SOC analysts, incident responders, detection engineers, and cybersecurity learners who want to practice structured phishing investigation and incident documentation.
+- Use authorized lab environments and approved investigation procedures.
+- Do not interact with suspected malicious infrastructure unless explicitly authorized and necessary for the investigation.
+- Do not send phishing emails to real users without formal authorization.
+- Do not execute suspicious attachments on production systems.
+- Protect personal data and confidential evidence.
+- Use synthetic or sanitized examples for public demonstrations.
+- Document tool limitations, evidence gaps, and uncertainty.
+- Never claim that an incident was contained, remediated, or validated unless the action was actually completed and its outcome verified.
 
-## Disclaimer
+## 11. Project Deliverables
 
-These projects are for educational, defensive, and portfolio purposes. They are not a substitute for an organization's approved incident-response procedures. Conduct all analysis within the scope of explicit authorization and applicable law.
+The repository is intended to demonstrate practical SOC capabilities through the following deliverables:
 
----
+- Structured phishing investigation case files
+- Technical email forensic analysis
+- Evidence and IOC registers
+- Investigation timelines
+- Threat intelligence enrichment records
+- MITRE ATT&CK technique mapping
+- SIEM detection queries and validation notes
+- Incident response playbooks
+- Technical incident reports
+- Remediation recommendations and lessons learned
 
-**Maintained as a cybersecurity investigation portfolio.**
+## 12. Learning Outcomes
+
+This project supports the development and demonstration of skills in:
+
+- Phishing alert triage and investigation
+- Email security and authentication analysis
+- Digital evidence handling
+- Threat intelligence and OSINT
+- IOC extraction and enrichment
+- SIEM investigations and detection engineering
+- Identity and endpoint investigation
+- MITRE ATT&CK mapping
+- Incident response and technical reporting
+- Evidence-based security decision-making
+
+## 13. References
+
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Microsoft Learn — Microsoft Defender for Office 365](https://learn.microsoft.com/en-us/defender-office-365/)
+- [Google Admin Toolbox](https://toolbox.googleapps.com/)
+- [VirusTotal](https://www.virustotal.com/)
+- [URLhaus](https://urlhaus.abuse.ch/)
+- [YARA](https://yara.readthedocs.io/)
+
