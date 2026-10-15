@@ -1,0 +1,189 @@
+{
+  "generated_utc": "2026-10-15T11:14:26.632256+00:00",
+  "method": "dig queries using the system-configured resolver",
+  "caution": "DNS responses are time-sensitive. No answer does not prove that a domain is unregistered or benign.",
+  "results": [
+    {
+      "domain_defanged": "cn[.]mebetx39[.]com",
+      "queried_domain": "cn.mebetx39.com",
+      "observed_utc": "2026-10-15T11:14:01.974513+00:00",
+      "records": {
+        "A": [
+          "cn.mebetx39.com.securesdns.com.",
+          "cn.mebetx39.com.fastliii.com.",
+          "cdn-209-cdn-209-b18-ws.fastliii.com.",
+          "172.65.201.65"
+        ],
+        "AAAA": [
+          "cn.mebetx39.com.securesdns.com.",
+          "cn.mebetx39.com.fastliii.com.",
+          "cdn-209-cdn-209-b18-ws.fastliii.com."
+        ],
+        "MX": [
+          "cn.mebetx39.com.securesdns.com.",
+          "cn.mebetx39.com.fastliii.com.",
+          "cdn-209-cdn-209-b18-ws.fastliii.com."
+        ]
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "exoticafood[.]com[.]br",
+      "queried_domain": "exoticafood.com.br",
+      "observed_utc": "2026-10-15T11:14:03.422916+00:00",
+      "records": {
+        "A": [],
+        "AAAA": [],
+        "MX": []
+      },
+      "errors": {
+        "A": "Command '['dig', '+time=3', '+tries=1', '+short', 'exoticafood.com.br', 'A']' timed out after 5 seconds",
+        "AAAA": "Command '['dig', '+time=3', '+tries=1', '+short', 'exoticafood.com.br', 'AAAA']' timed out after 5 seconds",
+        "MX": "Command '['dig', '+time=3', '+tries=1', '+short', 'exoticafood.com.br', 'MX']' timed out after 5 seconds"
+      },
+      "summary": "No answers returned; status requires further interpretation"
+    },
+    {
+      "domain_defanged": "help[.]steampowered[.]com[.]im",
+      "queried_domain": "help.steampowered.com.im",
+      "observed_utc": "2026-10-15T11:14:18.451241+00:00",
+      "records": {
+        "A": [],
+        "AAAA": [],
+        "MX": []
+      },
+      "errors": {
+        "A": "Command '['dig', '+time=3', '+tries=1', '+short', 'help.steampowered.com.im', 'A']' timed out after 5 seconds"
+      },
+      "summary": "No answers returned; status requires further interpretation"
+    },
+    {
+      "domain_defanged": "homeloans-wellsfargo-com[.]sbx[.]pgsdemo[.]com",
+      "queried_domain": "homeloans-wellsfargo-com.sbx.pgsdemo.com",
+      "observed_utc": "2026-10-15T11:14:24.310898+00:00",
+      "records": {
+        "A": [
+          "cloudflare.pgsdemo.com.",
+          "cloudflare.pgscdncf.com.cdn.cloudflare.net.",
+          "104.18.43.185",
+          "172.64.144.71"
+        ],
+        "AAAA": [
+          "cloudflare.pgsdemo.com.",
+          "cloudflare.pgscdncf.com.cdn.cloudflare.net.",
+          "2606:4700:83b2:5831:7bfd:4b1:98cf:7b06"
+        ],
+        "MX": [
+          "cloudflare.pgsdemo.com.",
+          "cloudflare.pgscdncf.com.cdn.cloudflare.net."
+        ]
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "humectaseis[.]com[.]tr",
+      "queried_domain": "humectaseis.com.tr",
+      "observed_utc": "2026-10-15T11:14:24.792485+00:00",
+      "records": {
+        "A": [
+          "restrictedspam.rpz.airtelspam.com.",
+          "125.21.240.67"
+        ],
+        "AAAA": [
+          "restrictedspam.rpz.airtelspam.com.",
+          "2404:a800:ff00:1::203d"
+        ],
+        "MX": []
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "kuucioinlogin[.]webflow[.]io",
+      "queried_domain": "kuucioinlogin.webflow.io",
+      "observed_utc": "2026-10-15T11:14:25.046751+00:00",
+      "records": {
+        "A": [
+          "104.18.36.248",
+          "172.64.151.8"
+        ],
+        "AAAA": [
+          "2606:4700:83b0:5eb0:533b:4b0:5c5c:ef1f"
+        ],
+        "MX": []
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "learn-liveledger-eng[.]typedream[.]app",
+      "queried_domain": "learn-liveledger-eng.typedream.app",
+      "observed_utc": "2026-10-15T11:14:25.586032+00:00",
+      "records": {
+        "A": [
+          "172.67.206.36",
+          "104.21.37.85"
+        ],
+        "AAAA": [],
+        "MX": []
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "romantic-salmon-tgjpnemj[.]edgeone[.]dev",
+      "queried_domain": "romantic-salmon-tgjpnemj.edgeone.dev",
+      "observed_utc": "2026-10-15T11:14:25.852487+00:00",
+      "records": {
+        "A": [
+          "2354db541df20c20.edgeone.dev.pages.dnsoe6.com.",
+          "43.174.247.29",
+          "43.174.246.29"
+        ],
+        "AAAA": [
+          "2354db541df20c20.edgeone.dev.pages.dnsoe6.com."
+        ],
+        "MX": [
+          "2354db541df20c20.edgeone.dev.pages.dnsoe6.com."
+        ]
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "s4w[.]in",
+      "queried_domain": "s4w.in",
+      "observed_utc": "2026-10-15T11:14:26.313404+00:00",
+      "records": {
+        "A": [
+          "restrictedspam.rpz.airtelspam.com.",
+          "125.21.240.67"
+        ],
+        "AAAA": [
+          "restrictedspam.rpz.airtelspam.com.",
+          "2404:a800:ff00:1::203d"
+        ],
+        "MX": []
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    },
+    {
+      "domain_defanged": "start-en-ledger-e-n[.]typedream[.]app",
+      "queried_domain": "start-en-ledger-e-n.typedream.app",
+      "observed_utc": "2026-10-15T11:14:26.449813+00:00",
+      "records": {
+        "A": [
+          "104.21.37.85",
+          "172.67.206.36"
+        ],
+        "AAAA": [],
+        "MX": []
+      },
+      "errors": {},
+      "summary": "DNS answers returned"
+    }
+  ]
+}

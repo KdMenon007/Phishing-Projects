@@ -1,0 +1,158 @@
+{
+  "generated_utc": "2026-10-15T11:13:10.244147+00:00",
+  "lookup_type": "RDAP domain registration metadata",
+  "caution": "RDAP availability and registration metadata do not establish whether a domain is malicious. HTTP errors are not proof of non-registration.",
+  "results": [
+    {
+      "domain_defanged": "cn[.]mebetx39[.]com",
+      "queried_domain": "cn.mebetx39.com",
+      "lookup_utc": "2026-10-15T11:12:55.226505+00:00",
+      "service": "https://rdap.verisign.com/com/v1",
+      "http_status": 404,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "exoticafood[.]com[.]br",
+      "queried_domain": "exoticafood.com.br",
+      "lookup_utc": "2026-10-15T11:12:56.965324+00:00",
+      "service": "https://rdap.registro.br",
+      "http_status": 200,
+      "domain_name": "exoticafood.com.br",
+      "status": [
+        "active"
+      ],
+      "events": [
+        {
+          "action": "registration",
+          "date": "2025-03-14T18:23:50Z"
+        },
+        {
+          "action": "last changed",
+          "date": "2025-04-09T02:32:38Z"
+        },
+        {
+          "action": "expiration",
+          "date": "2027-03-14T18:23:50Z"
+        }
+      ],
+      "error": null
+    },
+    {
+      "domain_defanged": "help[.]steampowered[.]com[.]im",
+      "queried_domain": "help.steampowered.com.im",
+      "lookup_utc": "2026-10-15T11:12:58.697934+00:00",
+      "service": "https://rdap.org",
+      "http_status": 404,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "homeloans-wellsfargo-com[.]sbx[.]pgsdemo[.]com",
+      "queried_domain": "homeloans-wellsfargo-com.sbx.pgsdemo.com",
+      "lookup_utc": "2026-10-15T11:12:59.541214+00:00",
+      "service": "https://rdap.verisign.com/com/v1",
+      "http_status": 404,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "humectaseis[.]com[.]tr",
+      "queried_domain": "humectaseis.com.tr",
+      "lookup_utc": "2026-10-15T11:13:00.803131+00:00",
+      "service": "https://rdap.org",
+      "http_status": 404,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "kuucioinlogin[.]webflow[.]io",
+      "queried_domain": "kuucioinlogin.webflow.io",
+      "lookup_utc": "2026-10-15T11:13:02.248346+00:00",
+      "service": "https://rdap.org",
+      "http_status": 404,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "learn-liveledger-eng[.]typedream[.]app",
+      "queried_domain": "learn-liveledger-eng.typedream.app",
+      "lookup_utc": "2026-10-15T11:13:03.378218+00:00",
+      "service": "https://pubapi.registry.google/rdap",
+      "http_status": 400,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "romantic-salmon-tgjpnemj[.]edgeone[.]dev",
+      "queried_domain": "romantic-salmon-tgjpnemj.edgeone.dev",
+      "lookup_utc": "2026-10-15T11:13:05.438309+00:00",
+      "service": "https://pubapi.registry.google/rdap",
+      "http_status": 400,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    },
+    {
+      "domain_defanged": "s4w[.]in",
+      "queried_domain": "s4w.in",
+      "lookup_utc": "2026-10-15T11:13:07.195622+00:00",
+      "service": "https://rdap.nixiregistry.in/rdap",
+      "http_status": 200,
+      "domain_name": "s4w.in",
+      "status": [
+        "client update prohibited",
+        "client delete prohibited",
+        "client transfer prohibited",
+        "client renew prohibited"
+      ],
+      "events": [
+        {
+          "action": "registration",
+          "date": "2007-11-15T08:01:46.925Z"
+        },
+        {
+          "action": "expiration",
+          "date": "2026-11-15T08:01:46.925Z"
+        },
+        {
+          "action": "last changed",
+          "date": "2026-02-20T12:37:44.195Z"
+        },
+        {
+          "action": "transfer",
+          "date": "2009-10-01T20:15:04.925Z"
+        },
+        {
+          "action": "last update of RDAP database",
+          "date": "2026-10-15T11:13:07.937Z"
+        }
+      ],
+      "error": null
+    },
+    {
+      "domain_defanged": "start-en-ledger-e-n[.]typedream[.]app",
+      "queried_domain": "start-en-ledger-e-n.typedream.app",
+      "lookup_utc": "2026-10-15T11:13:08.111896+00:00",
+      "service": "https://pubapi.registry.google/rdap",
+      "http_status": 400,
+      "domain_name": null,
+      "status": [],
+      "events": [],
+      "error": null
+    }
+  ]
+}

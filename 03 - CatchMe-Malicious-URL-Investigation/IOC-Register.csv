@@ -1,0 +1,11 @@
+indicator_type,indicator_defanged,source,first_observed_utc,validation_status,assessment,notes
+domain,cn[.]mebetx39[.]com,OpenPhish community feed,2026-10-15,Feed-listed; RDAP HTTP 404,Unresolved,HTTP 404 is not proof of non-registration or benign status
+domain,exoticafood[.]com[.]br,OpenPhish community feed,2026-10-15,RDAP HTTP 200,Registration metadata retrieved,Registration record returned; maliciousness not independently confirmed
+domain,help[.]steampowered[.]com[.]im,OpenPhish community feed,2026-10-15,RDAP HTTP 404; DNS query timeout,Unresolved,No definitive registration or current DNS conclusion
+domain,homeloans-wellsfargo-com[.]sbx[.]pgsdemo[.]com,OpenPhish community feed,2026-10-15,RDAP HTTP 404; DNS answers returned,Unresolved,Hosting-related DNS answers do not establish malicious use of infrastructure
+domain,humectaseis[.]com[.]tr,OpenPhish community feed,2026-10-15,RDAP HTTP 404; resolver comparison performed,Feed-listed; DNS filtering observed,Configured resolver returned filtering-related CNAME; public resolvers returned a different A record
+domain,kuucioinlogin[.]webflow[.]io,OpenPhish community feed,2026-10-15,RDAP HTTP 404; DNS answers returned,Unresolved,Hosted-platform address does not independently establish maliciousness
+domain,learn-liveledger-eng[.]typedream[.]app,OpenPhish community feed,2026-10-15,RDAP HTTP 400; DNS answers returned,Unresolved,RDAP response inconclusive; shared hosting possible
+domain,romantic-salmon-tgjpnemj[.]edgeone[.]dev,OpenPhish community feed,2026-10-15,RDAP HTTP 400; DNS answers returned,Unresolved,RDAP response inconclusive; hosting-related records observed
+domain,s4w[.]in,OpenPhish community feed,2026-10-15,RDAP HTTP 200; system resolver filtering-related CNAME,Registration metadata retrieved; DNS filtering observed,Registration record returned; public-resolver comparison remains outstanding
+domain,start-en-ledger-e-n[.]typedream[.]app,OpenPhish community feed,2026-10-15,RDAP HTTP 400; DNS answers returned,Unresolved,RDAP response inconclusive; shared hosting possible

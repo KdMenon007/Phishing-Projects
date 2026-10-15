@@ -1,0 +1,11 @@
+domain_defanged,source,observed_utc,dns_status,registration_status,independent_reputation,analyst_assessment
+cn[.]mebetx39[.]com,OpenPhish community feed,2026-10-15T11:11:16.461679+00:00,Not checked,RDAP returned 404; registration not established,Not checked,Feed-listed; RDAP record not found at lookup time; further verification needed
+exoticafood[.]com[.]br,OpenPhish community feed,2026-10-15T11:11:16.461726+00:00,Not checked,RDAP record returned; see rdap-results.json,Not checked,Feed-listed; RDAP metadata retrieved; maliciousness not established
+help[.]steampowered[.]com[.]im,OpenPhish community feed,2026-10-15T11:11:16.461740+00:00,Not checked,RDAP returned 404; registration not established,Not checked,Feed-listed; RDAP record not found at lookup time; further verification needed
+homeloans-wellsfargo-com[.]sbx[.]pgsdemo[.]com,OpenPhish community feed,2026-10-15T11:11:16.461750+00:00,Not checked,RDAP returned 404; registration not established,Not checked,Feed-listed; RDAP record not found at lookup time; further verification needed
+humectaseis[.]com[.]tr,OpenPhish community feed,2026-10-15T11:11:16.461759+00:00,Not checked,RDAP returned 404; registration not established,Not checked,Feed-listed; RDAP record not found at lookup time; further verification needed
+kuucioinlogin[.]webflow[.]io,OpenPhish community feed,2026-10-15T11:11:16.461768+00:00,Not checked,RDAP returned 404; registration not established,Not checked,Feed-listed; RDAP record not found at lookup time; further verification needed
+learn-liveledger-eng[.]typedream[.]app,OpenPhish community feed,2026-10-15T11:11:16.461779+00:00,Not checked,RDAP HTTP 400; inconclusive,Not checked,Feed-listed; registration status inconclusive
+romantic-salmon-tgjpnemj[.]edgeone[.]dev,OpenPhish community feed,2026-10-15T11:11:16.461788+00:00,Not checked,RDAP HTTP 400; inconclusive,Not checked,Feed-listed; registration status inconclusive
+s4w[.]in,OpenPhish community feed,2026-10-15T11:11:16.461797+00:00,Not checked,RDAP record returned; see rdap-results.json,Not checked,Feed-listed; RDAP metadata retrieved; maliciousness not established
+start-en-ledger-e-n[.]typedream[.]app,OpenPhish community feed,2026-10-15T11:11:16.461805+00:00,Not checked,RDAP HTTP 400; inconclusive,Not checked,Feed-listed; registration status inconclusive

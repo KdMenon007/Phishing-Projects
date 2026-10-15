@@ -1,0 +1,66 @@
+[
+  {
+    "input": "https://login.example.com/account/verify?ref=training",
+    "flags": [
+      "Authentication/redirect keyword"
+    ],
+    "scheme": "https",
+    "hostname": "login.example.com",
+    "port": null,
+    "path": "/account/verify",
+    "query_parameters": {
+      "ref": "training"
+    },
+    "userinfo_present": false,
+    "ip_literal": false,
+    "assessment": "Heuristic only; these flags do not prove malicious activity."
+  },
+  {
+    "input": "http://192.0.2.10/update/login",
+    "flags": [
+      "Not HTTPS",
+      "IP literal used as hostname",
+      "Authentication/redirect keyword"
+    ],
+    "scheme": "http",
+    "hostname": "192.0.2.10",
+    "port": null,
+    "path": "/update/login",
+    "query_parameters": {},
+    "userinfo_present": false,
+    "ip_literal": true,
+    "assessment": "Heuristic only; these flags do not prove malicious activity."
+  },
+  {
+    "input": "https://example.com@192.0.2.10/signin",
+    "flags": [
+      "User-info before @; inspect actual destination",
+      "IP literal used as hostname"
+    ],
+    "scheme": "https",
+    "hostname": "192.0.2.10",
+    "port": null,
+    "path": "/signin",
+    "query_parameters": {},
+    "userinfo_present": true,
+    "ip_literal": true,
+    "assessment": "Heuristic only; these flags do not prove malicious activity."
+  },
+  {
+    "input": "https://example.com/%2e%2e/redirect?next=https%3A%2F%2Fexample.org",
+    "flags": [
+      "Percent-encoded path",
+      "Authentication/redirect keyword"
+    ],
+    "scheme": "https",
+    "hostname": "example.com",
+    "port": null,
+    "path": "/%2e%2e/redirect",
+    "query_parameters": {
+      "next": "https://example.org"
+    },
+    "userinfo_present": false,
+    "ip_literal": false,
+    "assessment": "Heuristic only; these flags do not prove malicious activity."
+  }
+]

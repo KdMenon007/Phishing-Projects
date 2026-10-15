@@ -1,0 +1,11 @@
+sample_id,url_defanged,scheme,hostname_defanged,path,query_present,source,classification
+OPH-001,hxxp://help[.]steampowered[.]com[.]im/en/wizard/HelpRequest/HT-E8JJ-I6WP-QJ2C/,http,help[.]steampowered[.]com[.]im,/en/wizard/HelpRequest/HT-E8JJ-I6WP-QJ2C/,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-002,hxxp://humectaseis[.]com[.]tr/goodheads/?uid=lanorlab@7766aac2c14dbab8aff1bc5bb92fcb994793[.]net,http,humectaseis[.]com[.]tr,/goodheads/,true,OpenPhish community feed,Feed-listed; not independently verified
+OPH-003,hxxp://start-en-ledger-e-n[.]typedream[.]app/,http,start-en-ledger-e-n[.]typedream[.]app,/,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-004,hxxp://learn-liveledger-eng[.]typedream[.]app/,http,learn-liveledger-eng[.]typedream[.]app,/,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-005,hxxp://kuucioinlogin[.]webflow[.]io/,http,kuucioinlogin[.]webflow[.]io,/,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-006,hxxp://exoticafood[.]com[.]br/nd,http,exoticafood[.]com[.]br,/nd,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-007,hxxps://s4w[.]in/roblox-com-share-2753915549-Blox-FruitsprivateServerLinkCode=20050521686964129487128195074939,https,s4w[.]in,/roblox-com-share-2753915549-Blox-FruitsprivateServerLinkCode=20050521686964129487128195074939,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-008,hxxps://romantic-salmon-tgjpnemj[.]edgeone[.]dev/,https,romantic-salmon-tgjpnemj[.]edgeone[.]dev,/,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-009,hxxp://homeloans-wellsfargo-com[.]sbx[.]pgsdemo[.]com/,http,homeloans-wellsfargo-com[.]sbx[.]pgsdemo[.]com,/,false,OpenPhish community feed,Feed-listed; not independently verified
+OPH-010,hxxps://cn[.]mebetx39[.]com/home/register/,https,cn[.]mebetx39[.]com,/home/register/,false,OpenPhish community feed,Feed-listed; not independently verified

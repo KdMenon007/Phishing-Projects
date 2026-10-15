@@ -1,0 +1,11 @@
+{
+  "source": "OpenPhish community feed",
+  "retrieved_utc": "2026-10-15T11:10:48.650414+00:00",
+  "feed_sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+  "nonempty_lines": 300,
+  "valid_unique_urls": 300,
+  "invalid_lines": 0,
+  "sample_size": 10,
+  "sample_csv": "analysis/working/url-investigation-sample.csv",
+  "classification_note": "Feed inclusion is a reported indicator, not independent proof of current malicious activity."
+}
