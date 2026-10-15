@@ -56,6 +56,13 @@ Files and folders are included only when relevant to a particular investigation.
 
 ## Documentation
 
+Start with these operational guides:
+
+- [Phishing Investigation Playbook](Playbook.md) — overall investigation methodology, roles, decision points, and response principles.
+- [Phishing Investigation Runbook](Runbook.md) — step-by-step analyst workflow, evidence hashing, escalation criteria, containment decisions, and closure checks.
+
+> If your repository uses different filenames or stores these documents in a subfolder, update the links to match the exact GitHub paths.
+
 Where available, each project may include:
 
 | Document | Purpose |
@@ -114,3 +121,15 @@ Each investigation should state:
 - Which response actions were completed, recommended, or not performed.
 
 Do not infer compromise, credential theft, malware execution, or successful containment unless the evidence supports that conclusion.
+
+## Intended Audience
+
+This repository is intended for SOC analysts, incident responders, detection engineers, and cybersecurity learners who want to practice structured phishing investigation and incident documentation.
+
+## Disclaimer
+
+These projects are for educational, defensive, and portfolio purposes. They are not a substitute for an organization's approved incident-response procedures. Conduct all analysis within the scope of explicit authorization and applicable law.
+
+---
+
+**Maintained as a cybersecurity investigation portfolio.**
