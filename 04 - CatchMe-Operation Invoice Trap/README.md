@@ -1,5 +1,7 @@
 # CatchMe Project 01 — Operation Invoice Trap
 
+![Project Banner](assets/project-banner.png)
+
 **Role focus:** SOC Analyst L2 / Senior SOC Analyst  
 **Investigation type:** Phishing triage, Windows endpoint investigation, network traffic analysis, detection engineering  
 **Environment:** Authorized training lab; Windows endpoint telemetry and PCAP evidence
