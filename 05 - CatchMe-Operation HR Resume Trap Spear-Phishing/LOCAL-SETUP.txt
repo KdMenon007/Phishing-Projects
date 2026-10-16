@@ -1,0 +1,8 @@
+LOCAL SETUP
+
+1. Keep the original .eml and .raw files in your private local workspace.
+2. Extract email attachments with:
+   python3 scripts/extract_email_attachments.py "Junior IT Analyst Resume Application.eml" evidence/extracted
+3. Validate the workstation artefact format before selecting tools. `file WKSTN-2961.raw` reported `Windows Event Trace Log`; do not assume it is a conventional raw memory image.
+4. Add screenshots and command logs as you investigate.
+5. Do not publish original artefacts publicly unless redistribution is authorized.

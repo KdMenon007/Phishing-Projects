@@ -1,0 +1,8 @@
+
+Additional memory finding:
+A Base64-encoded PowerShell script fragment was recovered from memory.
+Observed behavior includes an AMSI bypass attempt and PowerShell ETW logging tampering attempt.
+Decoded C2 URL: http://128.199.95.189:8080
+Observed request path: /news.php
+HTTP client: System.Net.WebClient
+Limitation: the recovered script fragment is truncated; full request and response logic remains unconfirmed.

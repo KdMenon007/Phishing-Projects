@@ -1,0 +1,37 @@
+olevba 0.60.2 on Python 3.14.7 - http://decalage.info/python/oletools
+===============================================================================
+FILE: Resume_WesleyTaylor.doc
+Type: OLE
+-------------------------------------------------------------------------------
+VBA MACRO ThisDocument.cls 
+in file: Resume_WesleyTaylor.doc - OLE stream: 'Macros/VBA/ThisDocument'
+-------------------------------------------------------------------------------
+VBA MACRO NewMacros.bas 
+in file: Resume_WesleyTaylor.doc - OLE stream: 'Macros/VBA/NewMacros'
++----------+--------------------+---------------------------------------------+
+|Type      |Keyword             |Description                                  |
++----------+--------------------+---------------------------------------------+
+|AutoExec  |AutoOpen            |Runs when the Word document is opened        |
+|Suspicious|Open                |May open a file                              |
+|Suspicious|write               |May write to a file (if combined with Open)  |
+|Suspicious|Adodb.Stream        |May create a text file                       |
+|Suspicious|savetofile          |May create a text file                       |
+|Suspicious|Shell               |May run an executable file or a system       |
+|          |                    |command                                      |
+|Suspicious|WScript.Shell       |May run an executable file or a system       |
+|          |                    |command                                      |
+|Suspicious|CreateObject        |May create an OLE object                     |
+|Suspicious|Microsoft.XMLHTTP   |May download files from the Internet         |
+|Suspicious|Exec                |May run an executable file or a system       |
+|          |                    |command using Excel 4 Macros (XLM/XLF)       |
+|Suspicious|Hex Strings         |Hex-encoded strings were detected, may be    |
+|          |                    |used to obfuscate strings (option --decode to|
+|          |                    |see all)                                     |
+|IOC       |https://files.boogey|URL                                          |
+|          |manisback.lol/aa2a9c|                                             |
+|          |53cbb80416d3b47d8553|                                             |
+|          |8d9971/update.png   |                                             |
+|IOC       |update.js           |Executable file name                         |
+|IOC       |wscript.exe         |Executable file name                         |
++----------+--------------------+---------------------------------------------+
+

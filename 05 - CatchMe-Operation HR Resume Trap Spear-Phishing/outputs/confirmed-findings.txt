@@ -1,0 +1,48 @@
+CATCHME PROJECT 05 — CONFIRMED FINDINGS
+Basis: console output supplied by analyst during the investigation. These are analyst notes, not raw forensic exports.
+
+ORIGINAL EMAIL
+From: westaylor23@outlook.com
+To: maxine.beck@quicklogisticsorg.onmicrosoft.com
+Subject: Resume - Application for Junior IT Analyst Role
+Date: Sun, 20 Aug 2023 18:19:20 +0000
+SHA-256: 88d7090d0a9f7115ce9f76a2c82f6d4843cdf655fba09e0f0c50e4eddd554fce
+SPF/DKIM/DMARC: reported pass for outlook.com. Authentication pass does not establish benign intent.
+
+ORIGINAL ATTACHMENT: Resume_WesleyTaylor.doc
+MD5: 52c4384a0b9e248b95804352ebec6c5b
+SHA-256: 4db25ee3c46be38aa219fe2192711af65d55d5d7e25a889bb9990beb19f9b8b0
+File type: Composite Document File V2 Document (OLE), Windows, code page 1252
+Metadata: Author/Last Saved By tryhackme; created 2023-08-20 20:49; last saved 2023-08-20 21:24 (times as reported by file utility; timezone not independently established).
+Oletools indicators: AutoOpen, Microsoft.XMLHTTP, ADODB.Stream, SaveToFile, WScript.Shell, Shell, CreateObject; IOC URL and names update.js/wscript.exe.
+
+MACRO SOURCE
+AutoOpen performs GET https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png, writes responseBody to C:\ProgramData\update.js, then invokes wscript.exe C:\ProgramData\update.js.
+
+MEMORY PROCESS TREE
+OUTLOOK.EXE PID 1440 opened the .eml.
+WINWORD.EXE PID 1124 was associated with cached attachment path C:\Users\maxine.beck\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\WQHGZCFI\Resume_WesleyTaylor (002).doc.
+wscript.exe PID 4260 ran C:\ProgramData\update.js as child of WINWORD.EXE PID 1124.
+updater.exe PID 6216 ran from C:\Windows\Tasks\updater.exe as child of wscript.exe PID 4260.
+conhost.exe PID 4464 was a child of updater.exe PID 6216.
+
+NETWORK
+Volatility netscan output associated multiple CLOSED socket records for PID 6216 / updater.exe to 128.199.95.189:8080 on 2023-08-21 at times between 14:14:13 and 14:16:11 (timezone not independently established). Do not describe these as currently established sessions.
+Recovered strings in updater memory included /index.jsp, /index.php, /admin/get.php, Invoke-Empire, EmpireStager, PowershellEmpire, DotNetEmpire, Sharpire, RunPowerShell, stage2Response, FromBase64String, CreateDecryptor, CreateEncryptor. These strings are suspicious and consistent with Empire-related tooling or code references, but strings alone do not prove exact framework execution or the download mechanism.
+
+PERSISTENCE
+Extracted scheduled-task file corresponds to task URI \Updater; author/user QUICKLOGISTICS\maxine.beck; registration date 2023-08-21T15:14:03; enabled daily CalendarTrigger starting 2023-08-21T09:00:00. Action invokes C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe with hidden/noninteractive arguments that retrieve the HKCU value named debug, Base64-decode it as Unicode, and execute it with IEX. Run level LeastPrivilege; InteractiveToken.
+The contents of the HKCU debug value were not recovered in evidence supplied so far. Do not claim the decoded persistence payload is known.
+
+DUMPED UPDATER FILES
+Data section SHA-256: 8e82c6c1a860383f3c79838b7979b18f74cd0b001894d8b75e2f6f581fe51a55; MD5: 56431f7a46be7c6b2ebfeab1db4fabb8.
+Image section SHA-256: ade8c752735e24b3dfa6e99e8f4324af2fb52316baf27e789f845f427952a077; MD5: 968a425a8eb96ca6230c00d42b05170b.
+These hashes are for memory-dumped sections, not necessarily the original on-disk executable.
+
+LIMITATIONS
+- The original document was statically analyzed; it was not executed.
+- Remote URL content was not independently retrieved or validated; do not visit/download it outside an isolated, authorized analysis environment.
+- The registry HKCU debug value contents were not recovered.
+- The SOFTWARE hive could not be parsed from the available dump; Volatility's scheduled-task plugin failed due to unavailable SOFTWARE hive. Task XML was recovered by file scanning/dumping instead.
+- The supplied WKSTN-2961.raw was reported by `file` as a Windows Event Trace Log, although Volatility commands parsed it as a memory image. Document the artifact-format ambiguity.
+- Times in memory output and task XML have not been normalized to UTC.

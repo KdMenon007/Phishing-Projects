@@ -1,0 +1,5 @@
+Volatility 3 Framework 2.28.0
+
+Last Write Time	Hive Offset	Type	Key	Name	Data	Volatile
+
+-	0x9582eae33000	Key	\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services	-	-	-

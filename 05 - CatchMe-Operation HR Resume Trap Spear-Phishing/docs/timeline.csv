@@ -1,0 +1,7 @@
+event_time_as_reported,event,source,evidence_reference,confidence,notes
+2023-08-20 18:19:20 +0000,Resume-themed email received,Email headers,E-001,High,Header timestamp includes UTC offset
+2023-08-20 20:49,Attachment creation time,File metadata,E-003,Medium,Timezone not independently established
+2023-08-20 21:24,Attachment last-saved time,File metadata,E-003,Medium,Timezone not independently established
+2023-08-21 09:00,Updater scheduled task daily trigger start,Recovered task XML,E-007,High,Timezone not independently established
+2023-08-21 14:14:13–14:16:11,Repeated closed socket records to 128.199.95.189:8080,Volatility netscan notes,E-006,High for observed records; timezone unknown,Not currently established sessions
+2023-08-21 15:14:03,Updater scheduled task registration time,Recovered task XML,E-007,High,Timezone not independently established

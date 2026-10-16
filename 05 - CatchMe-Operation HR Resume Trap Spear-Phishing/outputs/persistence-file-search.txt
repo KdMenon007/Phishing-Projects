@@ -1,0 +1,9 @@
+0xe58f8103c940	\Windows\System32\DeviceSoftwareInstallationClient.dll
+0xe58f83954ee0	\Windows\System32\config\SOFTWARE
+0xe58f839559d0	\Windows\System32\config\SOFTWARE.LOG1
+0xe58f83955b60	\Windows\System32\config\SOFTWARE.LOG2
+0xe58f86b42440	\Windows\System32\Tasks\Microsoft\Windows\SoftwareProtectionPlatform\SvcRestartTask
+0xe58f89291e30	\Windows\Tasks\updater.exe
+0xe58f89293730	\Windows\Tasks\updater.exe
+0xe58f89295990	\Windows\System32\Tasks\Updater
+0xe58f89296c50	\Windows\Prefetch\UPDATER.EXE-F25601BD.pf
