@@ -1,5 +1,8 @@
 # CatchMe Project 05 --- Operation Resume Trap
 
+
+![Project Banner](screenshots/project-banner.png)
+
 **Scenario:** HR-themed spear-phishing investigation based on the
 TryHackMe Boogeyman 2 room.\
 **Status:** In progress. Findings must be validated against the supplied
