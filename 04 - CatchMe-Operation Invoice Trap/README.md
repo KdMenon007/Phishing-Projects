@@ -1,4 +1,4 @@
-# CatchMe Project 01 — Operation Invoice Trap
+# CatchMe Project 04 — Operation Invoice Trap
 
 ![Project Banner](assets/project-banner.png)
 
