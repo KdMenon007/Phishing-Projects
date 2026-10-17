@@ -1,0 +1,27 @@
+evidence_id,filename,description,source,status,notes
+SCR-01,screenshots/01-phishing-email.png,01 phishing email,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-02,screenshots/02-attachment-in-downloads.png,02 attachment in downloads,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-03,screenshots/03-mounted-iso-payload.png,03 mounted iso payload,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-04,screenshots/04-elastic-projectfinancial-search.png,04 elastic projectfinancial search,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-05,screenshots/05-elastic-mshta-payload-search.png,05 elastic mshta payload search,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-06,screenshots/06-elastic-xcopy-file-implant-command-line.png,06 elastic xcopy file implant command line,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-07,screenshots/07-elastic-review-dat-search.png,07 elastic review dat search,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-08,screenshots/08-fodhelper-uac-bypass-reference.png,08 fodhelper uac bypass reference,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-09,screenshots/09-elastic-fodhelper-process-events.png,09 elastic fodhelper process events,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-10,screenshots/10-elastic-rundll32-c2-connections.png,10 elastic rundll32 c2 connections,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-11,screenshots/11-elastic-remote-share-it-automation.png,11 elastic remote share it automation,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-12,screenshots/12-elastic-mimikatz-itadmin-process.png,12 elastic mimikatz itadmin process,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-13,screenshots/13-elastic-mimikatz-itadmin-pth-detail.png,13 elastic mimikatz itadmin pth detail,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-14,screenshots/14-elastic-mimikatz-process-detail.png,14 elastic mimikatz process detail,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-15,screenshots/15-elastic-mimikatz-administrator-pth.png,15 elastic mimikatz administrator pth,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-16,screenshots/16-elastic-dcsync-backupda.png,16 elastic dcsync backupda,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-17,screenshots/17-elastic-second-host-remote-process.png,17 elastic second host remote process,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-18,screenshots/18-elastic-credentialed-remote-powershell-redacted.png,18 elastic credentialed remote powershell redacted,User-supplied screenshot,Collected,Public-release screenshot; credential material redacted where applicable.
+SCR-19,screenshots/19-elastic-ransomware-download-attempt.png,19 elastic ransomware download attempt,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-20,screenshots/20-elastic-ransomware-search.png,20 elastic ransomware search,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-21,screenshots/21-elastic-ransomware-process-events.png,21 elastic ransomware process events,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-22,screenshots/22-elastic-ransomware-event-details.png,22 elastic ransomware event details,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+SCR-23,screenshots/23-elastic-mimikatz-follow-up-results.png,23 elastic mimikatz follow up results,User-supplied screenshot,Collected,Screenshot evidence; corroborate against exported raw event JSON where possible.
+EV-OPEN-01,N/A,Scheduled-task creation event / task name,Elastic / Windows task telemetry,Pending,Not established in supplied screenshots.
+EV-OPEN-02,N/A,Raw event export for direct rundll32 execution,Elastic / Winlogbeat,Pending,Parent-process field supports invocation but direct event should be validated.
+EV-OPEN-03,N/A,Ransomware file creation/execution and encryption impact,Endpoint / file telemetry,Pending,Download attempt alone does not establish successful execution or encryption.

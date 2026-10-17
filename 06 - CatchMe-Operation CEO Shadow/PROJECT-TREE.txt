@@ -1,0 +1,92 @@
+CatchMe-Project-06-Operation-CEO-Shadow-Final/
+├── detections/
+│   ├── credential-access.md
+│   ├── dcsync-detection.md
+│   ├── detection-coverage.md
+│   ├── lateral-movement.md
+│   ├── ransomware-download.md
+│   ├── scheduled-task-persistence.md
+│   └── suspicious-process-execution.md
+├── docs/
+│   ├── 01-scenario-and-scope.md
+│   ├── 02-initial-access-and-phishing.md
+│   ├── 03-stage1-payload-analysis.md
+│   ├── 04-persistence-investigation.md
+│   ├── 05-command-and-control-analysis.md
+│   ├── 06-privilege-escalation.md
+│   ├── 07-credential-access.md
+│   ├── 08-lateral-movement.md
+│   ├── 09-second-host-investigation.md
+│   ├── 10-active-directory-and-dcsync.md
+│   ├── 11-ransomware-investigation.md
+│   ├── 12-mitre-attack-mapping.md
+│   ├── 13-detection-and-response-playbook.md
+│   ├── 14-impact-and-recovery.md
+│   ├── 15-investigation-limitations.md
+│   └── 16-investigation-workflow-and-evidence.md
+├── evidence/
+│   ├── active-directory/
+│   │   └── README.md
+│   ├── authentication/
+│   │   └── README.md
+│   ├── email/
+│   │   └── README.md
+│   ├── endpoint/
+│   │   └── README.md
+│   ├── hashes/
+│   │   └── README.md
+│   ├── network/
+│   │   └── README.md
+│   ├── powershell/
+│   │   └── README.md
+│   ├── scheduled-tasks/
+│   │   └── README.md
+│   ├── smb-shares/
+│   │   └── README.md
+│   └── README.md
+├── queries/
+│   ├── elastic-kql/
+│   │   ├── 01-attachment-and-mshta.md
+│   │   ├── 02-review-dat.md
+│   │   ├── 03-scheduled-task.md
+│   │   ├── 04-network-pivots.md
+│   │   └── 05-credential-and-lateral-pivots.md
+│   ├── windows-event-logs/
+│   │   └── relevant-event-ids.md
+│   └── README.md
+├── screenshots/
+│   ├── 01-phishing-email.png
+│   ├── 02-attachment-in-downloads.png
+│   ├── 03-mounted-iso-payload.png
+│   ├── 04-elastic-projectfinancial-search.png
+│   ├── 05-elastic-mshta-payload-search.png
+│   ├── 06-elastic-xcopy-file-implant-command-line.png
+│   ├── 07-elastic-review-dat-search.png
+│   ├── 08-fodhelper-uac-bypass-reference.png
+│   ├── 09-elastic-fodhelper-process-events.png
+│   ├── 10-elastic-rundll32-c2-connections.png
+│   ├── 11-elastic-remote-share-it-automation.png
+│   ├── 12-elastic-mimikatz-itadmin-process.png
+│   ├── 13-elastic-mimikatz-itadmin-pth-detail.png
+│   ├── 14-elastic-mimikatz-process-detail.png
+│   ├── 15-elastic-mimikatz-administrator-pth.png
+│   ├── 16-elastic-dcsync-backupda.png
+│   ├── 17-elastic-second-host-remote-process.png
+│   ├── 18-elastic-credentialed-remote-powershell-redacted.png
+│   ├── 19-elastic-ransomware-download-attempt.png
+│   ├── 20-elastic-ransomware-search.png
+│   ├── 21-elastic-ransomware-process-events.png
+│   ├── 22-elastic-ransomware-event-details.png
+│   ├── 23-elastic-mimikatz-follow-up-results.png
+│   └── README.md
+├── scripts/
+│   ├── hash-evidence.py
+│   └── parse-timeline.py
+├── Attack-Timeline.md
+├── Evidence-Register.csv
+├── Executive-Summary.md
+├── Incident-Response-Report.md
+├── PROJECT-STATUS.md
+├── PROJECT-TREE.txt
+├── Question-Answer-Tracker.md
+└── README.md

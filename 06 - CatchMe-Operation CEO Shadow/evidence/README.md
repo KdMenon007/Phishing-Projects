@@ -1,0 +1,1 @@
+Save exported event JSON/CSV and safely collected artefacts in the relevant subfolders. Record source, collection time, hash, and notes in `../Evidence-Register.csv`. Keep original lab files separate from public releases. Do not store plaintext passwords or tokens in public artifacts.
